@@ -25,7 +25,6 @@ class Grille :
         """
         retourne la cellule de la grille de position (x=ligne, y=colonne)
         """
-
         return self.cadrillage[x][y]
 
     def __str__(self):
