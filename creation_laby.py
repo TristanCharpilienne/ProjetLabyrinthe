@@ -1,6 +1,4 @@
 def creer_labyrinthe(self,x, y):
-    """ 
-    """
     self.x = x
     self.y = y
 #les murs sont dans l'ordre : N, S, E, O. 
@@ -11,12 +9,10 @@ class Grille :
     """
     construction d'une grille de cellule
     """
-
     def __init__(self, nb_lig, nb_col):
         """
         construction d'une grille de dimension (nb_lig, nb_col)
         """
-
         self.nb_lig = nb_lig
         self.nb_colnb_colnc
         self.cadrillage = []
@@ -31,7 +27,6 @@ class Grille :
         """
 
         return self.cadrillage[x][y]
-    
 
     def __str__(self):
         """
@@ -39,7 +34,6 @@ class Grille :
         pour les cellules touchant le bord gauche ou le bord du haut de la grille, les 4 murs sont représentés.
         pour les autres, seuls les murs Est et Sud sont représentés
         """
-
         laby_lignes = []
         laby_l = ['+']
         for y in range(self.nc):
@@ -68,13 +62,10 @@ class Grille :
                     laby_l.append('   +')
             laby_lignes.append(''.join(laby_l))
 
-        #laby_lignes.append('\n')
         return '\n'.join(laby_lignes)
-
 
 if __name__ == "__main__":
     # Lance le test de la fonction creer_labyrinthe()
     Labyrinthe = creer_labyrinthe(4, 3, 30)
     m = nx.adjacency_matrix(Labyrinthe)
     print(m)
-
