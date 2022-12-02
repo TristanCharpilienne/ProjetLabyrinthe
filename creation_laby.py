@@ -9,7 +9,7 @@ def creer_labyrinthe(self,x, y):
 
 class Grille :
     """
-    construction d'une grille de cellules
+    construction d'une grille de cellule
     """
 
     def __init__(self, nb_lig, nb_col):
@@ -48,8 +48,7 @@ class Grille :
             else :
                 laby_l.append('   +')
         laby_lignes.append(''.join(laby_l))
-
-
+        
         for x in range(0,self.nl):
             if self.cadrillage[x][0].murs['O'] :
                 laby_l = ['|']
@@ -72,17 +71,10 @@ class Grille :
         #laby_lignes.append('\n')
         return '\n'.join(laby_lignes)
 
-    g = nx.graphes
-    
-    for index in range(nb_col,nb_lig):
-        g.add_nodes(index)
-        
-    
-    
-    
-    
+
 if __name__ == "__main__":
     # Lance le test de la fonction creer_labyrinthe()
     Labyrinthe = creer_labyrinthe(4, 3, 30)
     m = nx.adjacency_matrix(Labyrinthe)
     print(m)
+
